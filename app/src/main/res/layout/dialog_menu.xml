@@ -148,7 +148,7 @@
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/download" />
+                android:src="@drawable/service" />
 
             <TextView
                 android:layout_width="wrap_content"
