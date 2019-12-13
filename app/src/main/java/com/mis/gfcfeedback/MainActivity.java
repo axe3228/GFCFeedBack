@@ -33,6 +33,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
 import com.mis.gfcfeedback.Class.BackgroundWorker;
 import com.mis.gfcfeedback.Class.DBHelper;
 import com.mis.gfcfeedback.Class.clsFeedBack;
@@ -108,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         if (!root.exists()) {
             root.mkdirs();
         }
-
+        dlgUpdater();
 //        startTimer();
 //        countdown();
     }
@@ -649,5 +652,12 @@ public class MainActivity extends AppCompatActivity {
                 startTimer();
             }
         }
+    }
+
+    private void dlgUpdater(){
+        new AppUpdater(this)
+                .setUpdateFrom(UpdateFrom.GITHUB)
+                .setGitHubUserAndRepo("axe3228", "GFCFeedBack")
+                .start();
     }
 }
