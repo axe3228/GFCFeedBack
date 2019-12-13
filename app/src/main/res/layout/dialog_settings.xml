@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@drawable/xml_dialog_background">
+
+    <TextView
+        android:id="@+id/dlgSettings_tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:text="Settings"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/dlgSettings_etURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dlgSettings_tvTitle"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xml_white_background_border1"
+        android:hint="URL"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:fontFamily="casual"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/dlgSettings_etBUCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_below="@+id/dlgSettings_etURL"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xml_white_background_border1"
+        android:hint="Business Unit Code"
+        android:padding="10dp"
+        android:fontFamily="casual"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/dlgSettings_etBN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dlgSettings_etBUCode"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:fontFamily="casual"
+        android:background="@drawable/xml_white_background_border1"
+        android:hint="Branch Name"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/dlgSettings_etIDStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dlgSettings_etBN"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:fontFamily="casual"
+        android:background="@drawable/xml_white_background_border1"
+        android:hint="Store ID"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+
+    <EditText
+        android:id="@+id/dlgSettings_etBU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dlgSettings_etIDStore"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xml_white_background_border1"
+        android:hint="Business Unit"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:fontFamily="casual"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+
+    <Button
+        android:id="@+id/dlgSettings_btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/dlgSettings_etBU"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/xml_border_blue"
+        android:text="Confirm"
+        android:fontFamily="casual"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

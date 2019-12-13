@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@drawable/xml_plain_blackground">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/dlgMenu_llExportCSV"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_white_background_border"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Send Data"
+                android:fontFamily="casual"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dlgMenu_llSetting"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_white_background_border"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/settings"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Settings"
+                android:fontFamily="casual"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:layout_marginRight="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/dlgMenu_llSlideShow"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_white_background_border"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dlgMenu_ivAdsSwitch"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/adsicon" />
+
+            <TextView
+                android:id="@+id/dlgMenu_AdsSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Ads Switch"
+                android:fontFamily="casual"
+                android:textColor="#50C878"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dlgMenu_llTruncateTable"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_white_background_border"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginLeft="15sp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/trashcan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Truncate Table Feedback"
+                android:fontFamily="casual"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="15dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/dlgMenu_llDownloadAd"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_white_background_border"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/download" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Download Ads"
+                android:fontFamily="casual"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="15dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
