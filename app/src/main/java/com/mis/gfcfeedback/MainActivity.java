@@ -658,6 +658,7 @@ public class MainActivity extends AppCompatActivity {
         new AppUpdater(this)
                 .setUpdateFrom(UpdateFrom.GITHUB)
                 .setGitHubUserAndRepo("axe3228", "GFCFeedBack")
+                .showAppUpdated(true)
                 .start();
     }
 }
