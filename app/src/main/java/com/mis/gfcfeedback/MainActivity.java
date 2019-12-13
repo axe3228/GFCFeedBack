@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         if (!root.exists()) {
             root.mkdirs();
         }
-        dlgUpdater();
+       // dlgUpdater();
 //        startTimer();
 //        countdown();
     }
@@ -437,6 +437,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout llSettings = dialog.findViewById(R.id.dlgMenu_llSetting);
         LinearLayout llSlideShow = dialog.findViewById(R.id.dlgMenu_llSlideShow);
         LinearLayout llTruncateTableFb = dialog.findViewById(R.id.dlgMenu_llTruncateTable);
+        LinearLayout llDownload_ads = dialog.findViewById(R.id.dlgMenu_llDownloadAd);
         final TextView tvAdsSwitch = dialog.findViewById(R.id.dlgMenu_AdsSwitch);
         final ImageView ivAdsSwitch = dialog.findViewById(R.id.dlgMenu_ivAdsSwitch);
 
@@ -476,6 +477,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 yesornodialog();
+            }
+        });
+
+        llDownload_ads.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dlgUpdater();
             }
         });
 
