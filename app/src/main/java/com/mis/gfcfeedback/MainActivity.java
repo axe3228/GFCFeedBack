@@ -34,8 +34,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.AppUpdaterUtils;
+import com.github.javiersantos.appupdater.enums.AppUpdaterError;
 import com.github.javiersantos.appupdater.enums.Display;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
+import com.github.javiersantos.appupdater.objects.Update;
 import com.mis.gfcfeedback.Class.BackgroundWorker;
 import com.mis.gfcfeedback.Class.DBHelper;
 import com.mis.gfcfeedback.Class.clsFeedBack;
@@ -663,10 +666,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void dlgUpdater(){
-        new AppUpdater(this)
+//        new AppUpdater(this)
+//                .setUpdateFrom(UpdateFrom.GITHUB)
+//                .setGitHubUserAndRepo("axe3228", "GFCFeedBack")
+//                .showAppUpdated(true)
+//                .start();
+
+        AppUpdaterUtils appUpdaterUtils = new AppUpdaterUtils(this)
                 .setUpdateFrom(UpdateFrom.GITHUB)
                 .setGitHubUserAndRepo("axe3228", "GFCFeedBack")
-                .showAppUpdated(true)
-                .start();
+                .withListener(new AppUpdaterUtils.UpdateListener() {
+                    @Override
+                    public void onSuccess(Update update, Boolean isUpdateAvailable) {
+                        Log.d("Latest Version", update.getLatestVersion());
+                        Log.d("URL", update.getUrlToDownload().toString());
+                        Log.d("Is update available?", Boolean.toString(isUpdateAvailable));
+                    }
+
+                    @Override
+                    public void onFailed(AppUpdaterError error) {
+                        Log.d("AppUpdater Error", "Something went wrong");
+                    }
+                });
+        appUpdaterUtils.start();
     }
 }
